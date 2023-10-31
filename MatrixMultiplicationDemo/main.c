@@ -12,7 +12,7 @@
 #define M_P 2048
 #define K_P 3072
 
-#define USAGE "Usage: s[ingle-threaded] | m[ulti-threaded] thread-count:int\n"
+#define USAGE "Usage: test-count:int s[ingle-threaded] | m[ulti-threaded] thread-count:int\n"
 #define FLAG_SINGLE_THREAD 's'
 #define FLAG_MULTI_THREAD  'm'
 #define OUT_SINGLE_THREAD "out-s.txt"
@@ -26,46 +26,59 @@ static void matrix_free(double ** matrix, int m);
 
 int main(int argc, char ** argv)
 {
-	if (argc < 2)
+	if (argc < 3)
 	{
 		puts(USAGE);
 		return EXIT_SUCCESS;
 	}
 
-	switch (argv[1][0])
+	int test_count = atoi(argv[1]);
+	if (test_count <= 0)
+	{
+		printf("Invalid test count: %s\n", argv[2]);
+		return EXIT_SUCCESS;
+	}
+
+	switch (argv[2][0])
 	{
 		case FLAG_SINGLE_THREAD:
-			if (argc != 2)
-			{
-				puts(USAGE);
-				return EXIT_SUCCESS;
-			}
-			puts("=== Single-threaded simple demo ===");
-			mmatrix_demo_simple(mmatrix_1t);
-			puts("=== Single-threaded simple demo end ===\n");
-			puts("\n=== Single-threaded performance demo ===");
-			mmatrix_demo_performance(mmatrix_1t, OUT_SINGLE_THREAD);
-			puts("=== Single-threaded performance demo end ===");
-			break;
-		case FLAG_MULTI_THREAD:
 			if (argc != 3)
 			{
 				puts(USAGE);
 				return EXIT_SUCCESS;
 			}
-			int num_threads = atoi(argv[2]);
+			for (int i = 0; i < test_count; i++)
+			{
+				printf("=== Single-threaded simple demo #%d ===\n", i);
+				mmatrix_demo_simple(mmatrix_1t);
+				printf("=== Single-threaded simple demo #%d end ===\n", i);
+				printf("\n=== Single-threaded performance demo #%d ===\n", i);
+				mmatrix_demo_performance(mmatrix_1t, OUT_SINGLE_THREAD);
+				printf("=== Single-threaded performance demo #%d end ===\n", i);
+			}
+			break;
+		case FLAG_MULTI_THREAD:
+			if (argc != 4)
+			{
+				puts(USAGE);
+				return EXIT_SUCCESS;
+			}
+			int num_threads = atoi(argv[3]);
 			if (num_threads <= 0)
 			{
 				printf("Invalid thread count: %s\n", argv[2]);
 				return EXIT_SUCCESS;
 			}
 			omp_set_num_threads(num_threads);
-			puts("=== Multi-threaded simple demo ===");
-			mmatrix_demo_simple(mmatrix_mt);
-			puts("=== Multi-threaded simple demo end ===\n");
-			puts("\n=== Multi-threaded performance demo ===");
-			mmatrix_demo_performance(mmatrix_mt, OUT_MULTI_THREAD);
-			puts("=== Multi-threaded performance demo end ===");
+			for (int i = 0; i < test_count; i++)
+			{
+				printf("=== Multi-threaded simple demo #%d ===\n", i);
+				mmatrix_demo_simple(mmatrix_mt);
+				printf("=== Multi-threaded simple demo #%d end ===\n", i);
+				printf("\n=== Multi-threaded performance demo #%d ===\n", i);
+				mmatrix_demo_performance(mmatrix_mt, OUT_MULTI_THREAD);
+				printf("=== Multi-threaded performance demo #%d end ===\n", i);
+			}
 			break;
 		default:
 			puts(USAGE);
