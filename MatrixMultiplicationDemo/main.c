@@ -26,7 +26,7 @@ static void matrix_free(double ** matrix, int m);
 
 int main(int argc, char ** argv)
 {
-	if ((argc != 2) && (argc != 3))
+	if (argc < 2)
 	{
 		puts(USAGE);
 		return EXIT_SUCCESS;
@@ -35,6 +35,11 @@ int main(int argc, char ** argv)
 	switch (argv[1][0])
 	{
 		case FLAG_SINGLE_THREAD:
+			if (argc != 2)
+			{
+				puts(USAGE);
+				return EXIT_SUCCESS;
+			}
 			puts("=== Single-threaded simple demo ===");
 			mmatrix_demo_simple(mmatrix_1t);
 			puts("=== Single-threaded simple demo end ===\n");
@@ -43,6 +48,11 @@ int main(int argc, char ** argv)
 			puts("=== Single-threaded performance demo end ===");
 			break;
 		case FLAG_MULTI_THREAD:
+			if (argc != 3)
+			{
+				puts(USAGE);
+				return EXIT_SUCCESS;
+			}
 			int num_threads = atoi(argv[2]);
 			if (num_threads <= 0)
 			{

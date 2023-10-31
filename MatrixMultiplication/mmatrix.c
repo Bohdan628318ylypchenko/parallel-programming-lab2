@@ -40,19 +40,21 @@ void mmatrix_mt(int n, int m, int k,
 				const double * const restrict * const restrict a, const double * const restrict * const restrict b,
 				double * restrict * restrict * restrict c)
 {
-	int p1, p2, i;
-	#pragma omp parallel default(none) private(p1, p2, i) shared(n, m, a, b, c)
+	/*
+	 * p1               - private as 1st cycle variable in "for" construct
+	 * p2, k            - private as vars declared inside parallel construct
+	 * n, m, k, a, b, c - shared as vars declared outside of parallel construct
+     */
+	int p1;
+	#pragma omp parallel for schedule(static)
+	for (p1 = 0; p1 < n; p1++)
 	{
-		#pragma omp for schedule(static)
-		for (p1 = 0; p1 < n; p1++)
+		for (int p2 = 0; p2 < k; p2++)
 		{
-			for (p2 = 0; p2 < k; p2++)
+			(*c)[p1][p2] = 0;
+			for (int i = 0; i < m; i++)
 			{
-				(*c)[p1][p2] = 0;
-				for (i = 0; i < m; i++)
-				{
-					(*c)[p1][p2] += a[p1][i] * b[i][p2];
-				}
+				(*c)[p1][p2] += a[p1][i] * b[i][p2];
 			}
 		}
 	}
