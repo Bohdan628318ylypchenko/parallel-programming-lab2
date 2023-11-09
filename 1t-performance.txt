@@ -1,0 +1,8 @@
+PS J:\repos\Parallel computing\MatrixMultiplication\x64\Release> .\MatrixMultiplicationDemo.exe s
+Single thread run 0 | Time: 53.029524
+Single thread run 1 | Time: 52.121171
+Single thread run 2 | Time: 52.089143
+Single thread run 3 | Time: 51.848553
+Single thread run 4 | Time: 52.744421
+Best time: 51.848553
+PS J:\repos\Parallel computing\MatrixMultiplication\x64\Release>

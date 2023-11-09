@@ -1,0 +1,120 @@
+PS J:\repos\Parallel computing\MatrixMultiplication\x64\Release> .\MatrixMultiplicationDemo.exe m 1
+Multi thread run 0; n = 1 | Time: 51.767033
+Multi thread run 1; n = 1 | Time: 50.221874
+Multi thread run 2; n = 1 | Time: 51.283795
+Multi thread run 3; n = 1 | Time: 53.225370
+Multi thread run 4; n = 1 | Time: 52.290860
+Best time: 50.221874
+PS J:\repos\Parallel computing\MatrixMultiplication\x64\Release> .\MatrixMultiplicationDemo.exe m 2
+Multi thread run 0; n = 2 | Time: 26.460316
+Multi thread run 1; n = 2 | Time: 26.918980
+Multi thread run 2; n = 2 | Time: 26.696870
+Multi thread run 3; n = 2 | Time: 26.530649
+Multi thread run 4; n = 2 | Time: 26.595843
+Best time: 26.460316
+PS J:\repos\Parallel computing\MatrixMultiplication\x64\Release> .\MatrixMultiplicationDemo.exe m 3
+Multi thread run 0; n = 3 | Time: 19.336353
+Multi thread run 1; n = 3 | Time: 20.785103
+Multi thread run 2; n = 3 | Time: 21.053827
+Multi thread run 3; n = 3 | Time: 21.354076
+Multi thread run 4; n = 3 | Time: 21.818698
+Best time: 19.336353
+PS J:\repos\Parallel computing\MatrixMultiplication\x64\Release> .\MatrixMultiplicationDemo.exe m 4
+Multi thread run 0; n = 4 | Time: 16.175317
+Multi thread run 1; n = 4 | Time: 18.211670
+Multi thread run 2; n = 4 | Time: 19.016858
+Multi thread run 3; n = 4 | Time: 18.939337
+Multi thread run 4; n = 4 | Time: 19.277555
+Best time: 16.175317
+PS J:\repos\Parallel computing\MatrixMultiplication\x64\Release> .\MatrixMultiplicationDemo.exe m 5
+Multi thread run 0; n = 5 | Time: 14.486773
+Multi thread run 1; n = 5 | Time: 16.988550
+Multi thread run 2; n = 5 | Time: 17.876853
+Multi thread run 3; n = 5 | Time: 17.817613
+Multi thread run 4; n = 5 | Time: 18.142916
+Best time: 14.486773
+PS J:\repos\Parallel computing\MatrixMultiplication\x64\Release> .\MatrixMultiplicationDemo.exe m 6
+Multi thread run 0; n = 6 | Time: 14.056830
+Multi thread run 1; n = 6 | Time: 16.499281
+Multi thread run 2; n = 6 | Time: 17.283317
+Multi thread run 3; n = 6 | Time: 17.424334
+Multi thread run 4; n = 6 | Time: 17.578709
+Best time: 14.056830
+PS J:\repos\Parallel computing\MatrixMultiplication\x64\Release> .\MatrixMultiplicationDemo.exe m 7
+Multi thread run 0; n = 7 | Time: 13.361369
+Multi thread run 1; n = 7 | Time: 16.827416
+Multi thread run 2; n = 7 | Time: 17.036933
+Multi thread run 3; n = 7 | Time: 17.230839
+Multi thread run 4; n = 7 | Time: 17.107746
+Best time: 13.361369
+PS J:\repos\Parallel computing\MatrixMultiplication\x64\Release> .\MatrixMultiplicationDemo.exe m 8
+Multi thread run 0; n = 8 | Time: 13.302053
+Multi thread run 1; n = 8 | Time: 16.991370
+Multi thread run 2; n = 8 | Time: 17.202358
+Multi thread run 3; n = 8 | Time: 17.261102
+Multi thread run 4; n = 8 | Time: 17.211156
+Best time: 13.302053
+PS J:\repos\Parallel computing\MatrixMultiplication\x64\Release> .\MatrixMultiplicationDemo.exe m 9
+Multi thread run 0; n = 9 | Time: 13.639270
+Multi thread run 1; n = 9 | Time: 16.892380
+Multi thread run 2; n = 9 | Time: 17.397582
+Multi thread run 3; n = 9 | Time: 17.330922
+Multi thread run 4; n = 9 | Time: 17.312324
+Best time: 13.639270
+PS J:\repos\Parallel computing\MatrixMultiplication\x64\Release> .\MatrixMultiplicationDemo.exe m 10
+Multi thread run 0; n = 10 | Time: 15.389566
+Multi thread run 1; n = 10 | Time: 17.275815
+Multi thread run 2; n = 10 | Time: 17.181204
+Multi thread run 3; n = 10 | Time: 17.366946
+Multi thread run 4; n = 10 | Time: 17.363062
+Best time: 15.389566
+PS J:\repos\Parallel computing\MatrixMultiplication\x64\Release> .\MatrixMultiplicationDemo.exe m 11
+Multi thread run 0; n = 11 | Time: 13.502090
+Multi thread run 1; n = 11 | Time: 17.166458
+Multi thread run 2; n = 11 | Time: 17.118975
+Multi thread run 3; n = 11 | Time: 17.139387
+Multi thread run 4; n = 11 | Time: 17.283431
+Best time: 13.502090
+PS J:\repos\Parallel computing\MatrixMultiplication\x64\Release> .\MatrixMultiplicationDemo.exe m 12
+Multi thread run 0; n = 12 | Time: 13.343987
+Multi thread run 1; n = 12 | Time: 16.359024
+Multi thread run 2; n = 12 | Time: 17.080481
+Multi thread run 3; n = 12 | Time: 17.349253
+Multi thread run 4; n = 12 | Time: 17.254864
+Best time: 13.343987
+PS J:\repos\Parallel computing\MatrixMultiplication\x64\Release> .\MatrixMultiplicationDemo.exe m 13
+Multi thread run 0; n = 13 | Time: 14.138751
+Multi thread run 1; n = 13 | Time: 17.234241
+Multi thread run 2; n = 13 | Time: 17.615324
+Multi thread run 3; n = 13 | Time: 17.443238
+Multi thread run 4; n = 13 | Time: 17.326847
+Best time: 14.138751
+PS J:\repos\Parallel computing\MatrixMultiplication\x64\Release> .\MatrixMultiplicationDemo.exe m 14
+Multi thread run 0; n = 14 | Time: 13.321032
+Multi thread run 1; n = 14 | Time: 17.192534
+Multi thread run 2; n = 14 | Time: 17.361008
+Multi thread run 3; n = 14 | Time: 17.259120
+Multi thread run 4; n = 14 | Time: 17.252583
+Best time: 13.321032
+PS J:\repos\Parallel computing\MatrixMultiplication\x64\Release> .\MatrixMultiplicationDemo.exe m 15
+Multi thread run 0; n = 15 | Time: 13.492839
+Multi thread run 1; n = 15 | Time: 16.769180
+Multi thread run 2; n = 15 | Time: 17.165785
+Multi thread run 3; n = 15 | Time: 17.316608
+Multi thread run 4; n = 15 | Time: 17.530316
+Best time: 13.492839
+PS J:\repos\Parallel computing\MatrixMultiplication\x64\Release> .\MatrixMultiplicationDemo.exe m 16
+Multi thread run 0; n = 16 | Time: 13.368078
+Multi thread run 1; n = 16 | Time: 16.759268
+Multi thread run 2; n = 16 | Time: 17.346903
+Multi thread run 3; n = 16 | Time: 17.352960
+Multi thread run 4; n = 16 | Time: 17.268071
+Best time: 13.368078
+PS J:\repos\Parallel computing\MatrixMultiplication\x64\Release> .\MatrixMultiplicationDemo.exe m 17
+Multi thread run 0; n = 17 | Time: 14.811779
+Multi thread run 1; n = 17 | Time: 17.238525
+Multi thread run 2; n = 17 | Time: 17.213776
+Multi thread run 3; n = 17 | Time: 17.484404
+Multi thread run 4; n = 17 | Time: 17.444418
+Best time: 14.811779
+PS J:\repos\Parallel computing\MatrixMultiplication\x64\Release>

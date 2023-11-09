@@ -1,0 +1,12 @@
+PS J:\repos\Parallel computing\MatrixMultiplication\x64\Release> .\DemoOpenMP.exe
+OpenMP is supported.
+end_time - start_time = 0.00000010000076144934; tick = 0.0000001
+Hello world from thread with thread_num = 0
+Hello world from thread with thread_num = 7
+Hello world from thread with thread_num = 5
+Hello world from thread with thread_num = 4
+Hello world from thread with thread_num = 2
+Hello world from thread with thread_num = 6
+Hello world from thread with thread_num = 3
+Hello world from thread with thread_num = 1
+PS J:\repos\Parallel computing\MatrixMultiplication\x64\Release>

@@ -12,7 +12,7 @@ int main()
 	end_time = omp_get_wtime();
 	tick = omp_get_wtick();
 
-	printf("end_time - start_time = %lf; tick = %lf\n", end_time - start_time, tick);
+	printf("end_time - start_time = %.20lf; tick = %.7lf\n", end_time - start_time, tick);
 
 	#pragma omp parallel
 	{
