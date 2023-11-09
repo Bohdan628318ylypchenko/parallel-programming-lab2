@@ -1,5 +1,8 @@
 #include "pch.h"
+
 #include "mmatrix.h"
+
+#include <omp.h>
 
 /// <summary>
 /// Single thread matrix multiplication.
